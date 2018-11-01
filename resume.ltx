@@ -1,52 +1,105 @@
-\documentclass[line,margin]{res}
+% IMPORTS
+\documentclass{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{hyperref}
+\usepackage{multicol}
 
-\newcommand{\when}[1]{\hfill \textbf{\textit{#1}\\}}
-\newcommand{\activity}[2]{\textbf{#1} \when{#2}}
-\newcommand{\as}{\vspace{1mm}\\}
-\newcommand{\atab}{$>$ \hspace{2mm}}
+% CONFIGURATIONS
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,
+	urlcolor=cyan
+}  % https://www.overleaf.com/learn/latex/hyperlinks
+\pagenumbering{gobble}
 
+% COMMANDS
+\newcommand{\side}[1]{\hspace*{\fill}#1} 			% For date information
+\newcommand{\tab}{\hspace*{4mm}} 			% Indent
+\newcommand{\header}[1]{\section*{\underline{#1}}}	% Header
+\newcommand{\bb}[1]{\textbf{#1}} 				% Emphasis lvl 1
+\newcommand{\bi}[1]{\textbf{\textit{#1}}} 			% Emphasis lvl 2
+\newcommand{\ii}[1]{\textit{#1}} 				% Emphasis lvl 3
 
-
-
+% DOCUMENT
 \begin{document}
-\name{Cody Perakslis}
-\address{codyperakslis.com}
-\address{(605)-661-5749\\perak005@umn.edu}
-\begin{resume}
-\section{EDUCATION}
-\activity{B.S. in Computer Science\\B.A. in Philosophy}{Sept 2016 - May 2020}
-College of Science and Engineering\\
-University of Minnesota-Twin Cities, Minneapolis, MN\\
-Minors: Mathematics\\
-Credits Completed: 119\\
-GPA: 3.985
-\section{EXPERIENCES}
-\activity{Co-Founder}{Jan 2018 - Present}
-Kanetus LLC, Minneapolis, MN\as
-A touring app (kanetus.com). Created and manage a \textbf{PostGIS database} in \textbf{AWS RDS}. Write \textbf{APIs} in \textbf{Go} and \textbf{Python}. Host the website and web app statically through S3. \textbf{Automate} our deployment. Manage our finances and org structure.\as\as
-\activity{Teaching Assistant}{Jan 2018 - May 2018}
-University of Minnesota-Twin Cities, Minneapolis, MN\as
-Assisted in instructing CSCI 2021 Machine Architecture\\
-\atab Class focusing on \textbf{C programming} to teach low level program details\as\as
-\activity{Cloud Automation Intern}{May 2017 - Aug 2018}
-SPS Commerce, Minneapolis, MN\as
-\atab Wrote a system to run generic tasks on \textbf{AWS ECS}. Users interact through the \textbf{API} with a custom authorizer. It used \textbf{SQS}, \textbf{Lambda}, \textbf{API Gateway}, \textbf{DynamoDB}, \textbf{ECS}, \textbf{EC2}, and \textbf{CloudWatch}
-to orchestrate running tasks and creating a cron to periodically run the task with logging. Integrated into the companies build-deploy pipeline.\as
-\atab Containerized \textbf{Ansible} deployments in \textbf{Jenkins}. Pulled or pushed the \textbf{Docker} image to \textbf{ECR} for deployments as a promotion path. Written primarily in \textbf{bash}.\as
-\atab Setup the database and server for \textbf{SonarQube} and helped give an internal talk and demo showing how to use it.\as\as
-\activity{Coding Club Guru Volunteer}{2015 - 2016}
-Yankton, SD\as
-Helped teach Scratch programming to 75+ elementary students\\
-Ran the club the last few weeks when the instructor stopped coming
-\section{STUDENT ACTIVITIES}
-Writer, The Wake Magazine\when{Sept 2016 - Present}
-Member, Philosophy Club\when{Feb 2017 - Present}
-\atab Event Planner \when{Apr 2017 - Apr 2018}
-\atab President \when{Apr 2018 - Present}
-Founder, The Cloud Computing Student Group \when{Nov 2017 - Present}
-\atab President, teach AWS (umncloud.com) \\
-Project Manager, Tesla Works \when{Dec 2017 - Present}
-Member, Tau Beta Pi \when{Dec 2017 - Present}
-\atab Secretary \when{May 2018 - Present}
-\end{resume}
+\begin{center}
+
+
+\section*{Cody Perakslis}
+\url{http://codyperakslis.com}, % TODO: give website SSL
+\href{mailto:perak005@umn.edu}{perak005@umn.edu}\\
+\end{center}
+\begin{multicols}{2}
+
+
+\header{Education} % Education
+\bb{University of Minnesota Twin Cities}, grad 05/2020\\
+\tab \bi{B.S. Computer Science}\\
+\tab \bi{B.A. Philosophy} \\
+\tab \ii{Mathematics Minor}\\
+\tab \ii{Honor's Program}\\
+\tab \href{https://github.com/CodyPerakslis/resume/blob/master/SSR_TSRPT.pdf}{GPA: 3.985}
+\columnbreak
+
+
+\header{Skills}
+\bb{Major Skill Area}\\
+Cloud Backend in AWS, but trying to be well-rounded\\
+\bb{Languages}\\
+Python, Go, C, Java, Swift, Javascript, Kotlin, OCaml\\
+\bb{CI/CD}\\
+Docker, Ansible, Git, Jenkins, SonarQube, Agile Method
+\end{multicols}
+
+
+\header{Work Experiences}
+\bb{Co-Founder of Kanetus LLC}, Minneapolis, MN \side{01/2018 - Present.}\\
+\tab I am the technical co-founder of this audio-touring platform. We have the locations \\
+in a POSTGIS database hosted out of AWS to populate audio geofences in apps for \\
+both Android and iOS. Most of my development is focused on backend. I manage the\\
+programming effort and finances and org structure. \url{https://www.kanetus.com}\\
+\\
+\bb{Cloud Automation Intern at SPS Commerce}, Minneapolis, MN \side{05/2017 - 08/2018}\\
+\tab I worked with the cloud automation/security \& compliance teams. I wrote a system \\
+to run generic tasks on a shared AWS ECS Cluster. Later refactored the code and \\
+updated the API (backwards compatibly). I set up a containerized deployment model \\
+for Ansible run on Jenkins. I set up the database and server for SonarQube and helped\\
+give a talk and demon and why and how to use it.\\
+\\
+\bb{Csci 2021 Teaching Assistant at University of Minnesota}, Minneapolis, MN \side{01/2018 - 05/2018}\\
+\tab The first programming language I sat down and learned was C. It always has a special \\
+place in my heart. I was able to TA the C-programming class under professor Kaufman. \\
+I held office hours, assisted in lab, graded exams, and helped proctor an exam.\\
+\\
+\bb{Summer IT Assistant at Yankton School District}, Yankton, SD \side{Summers 05/2014 - 08/2016}
+
+
+\header{Technical Experiences}
+\bb{Founded and Run of the Cloud Computing Student Group} \side{11/2017 - Present.}\\
+\tab I want to teach others the power of the cloud. \url{https://www.umncloud.com}
+\\
+\bb{Distributed Computing Research Group} \side{08/2018 - Present.}\\
+\tab Working to open source the group's Nebula project.
+\\
+\bb{AI Class Project} \side{05/2018} \\
+\tab Co-wrote machine learning algorithms in Python to compare for sentiment analysis (NLP).
+\\
+\bb{Coding Club Guru Volunteer} \side {2015 - 2016}\\
+\tab I helped teach Scratch programming to elementary students. I ran the club the last few \\
+weeks of the year when the instructor quit.
+
+
+\header{Unique Experiences}
+\bb{President of Philosophy Club} \side{04/2018 - Present.}\\
+\tab We have a member (usually an officer) present on a topic, then have group discussion.\\
+We also host a professor talk and camping trip each year. I have been a member since 01/2017.
+\\
+\bb{Secretary of Tau Beta Pi} \side{05/2018 - Present.}\\
+\tab An engineering honor society with a chapter on campus. I have been a member since 01/2018.
+\\
+\bb{Writer for The Wake Magazine} \side{09/2016 - 10/2018}\\
+\tab I frequently wrote opinion pieces in the realm of technology or global policy.
+\\
 \end{document}
+
