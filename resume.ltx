@@ -3,6 +3,8 @@
 \usepackage[margin=0.5in]{geometry}
 \usepackage{hyperref}
 \usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{verbatim}
 
 % CONFIGURATIONS
 \hypersetup{
@@ -38,71 +40,88 @@
 \tab \bi{M.S. Computer Science}\\
 \bb{University of Minnesota-TC Undergrad}, grad 05/2020\\
 \tab \bi{B.S. Computer Science}\\
-\tab \tab \bi{Philosophy Major} \\
-\tab \tab \bi{Mathematics Major}\\
-\tab \ii{Honor's Program}\\
+\tab \tab \bi{Philosophy Major} (Capstone Delayed)\\
+\tab \tab \bi{Mathematics Major} (Capstone Delayed)\\
 \tab \href{https://github.com/CodyPerakslis/resume/blob/master/SSR_TSRPT.pdf}{GPA: 3.894}
 \columnbreak
 
 
 \header{Skills}
 \bb{Major Skill Area}\\
-Cloud Backend in AWS\\
+Cloud Backend, AWS\\
 \bb{Major Languages}\\
 Python, Golang, C/C++, Swift\\
 \bb{CI/CD}\\
-Docker, Ansible, Git, Jenkins, SonarQube, Agile Method\\
-\bb{See More}\\
-Checkout out my Github \href{https://github.com/CodyPerakslis}{github.com/CodyPerakslis} 
+Docker, Ansible, Git, Jenkins, Agile Method\\
+\bb{See More:} \href{https://github.com/CodyPerakslis}{github.com/CodyPerakslis} 
 \end{multicols}
 
 
 \header{Work Experiences}
-\bb{Edge Computing Research}, Minneapolis, MN \side{05/2019 - Present.}\\
-\tab Work in the Distributed Computing Research Group in designing a docker-based \\
-decentralized edge computing (cloud computing but with smaller volunteer machines)\\ 
-system, called Armada, built using Golang.\\
-\\
-\bb{Co-Founder of The Voy App}, Minneapolis, MN \side{01/2018 - 12/2019}\\
-\tab I am the technical co-founder of this audio-touring platform. We have the locations \\
-in a POSTGIS database hosted out of AWS to populate audio geofences in apps for \\
-iOS. Most of my development is focused on backend. I manage the programming effort \\
-and finances and org structure. \url{https://www.thevoyapp.com}\\
-\\
-\bb{Cloud Automation Intern at SPS Commerce}, Minneapolis, MN \side{05/2017 - 08/2018}\\
-\tab I worked with the cloud automation/security \& compliance teams. I wrote a system \\
-to run generic tasks on a shared AWS ECS Cluster. Later refactored the code and \\
-updated the API (backwards compatibly). I set up a containerized deployment model \\
-for Ansible run on Jenkins. I set up the database and server for SonarQube and helped\\
-give a talk on why to use it and demo on how to use it.\\
-\\
-\bb{Csci 2021: Machine Architecture TA at UMN}, Minneapolis, MN \side{01/2018 - 05/2018}\\
+\bb{Edge Computing Researcher at UMN}, Minneapolis, MN \side{05/2019 - Present.}
+\begin{itemize}[noitemsep]
+\item Design Armada, a decentralized edge computing system for volunteer nodes
+\item Write code in golang using Docker/Moby APIs
+\item Writing paper for publication
+\end{itemize}
+\bb{Technical Co-Founder of Kanetus LLC}, Minneapolis, MN \side{01/2018 - 12/2019}
+\begin{itemize}[noitemsep]
+\item Created audio-touring platform for an iOS app (\url{https://www.thevoyapp.com})
+\item Built and Maintained POSTGIS database hosted on AWS
+\item Wrote and Updated APIs to communicate between the app and the backend 
+\item Hosted other resources with ECS and S3 on AWS
+\item Managed programming effort, finances, and org structure
+\end{itemize}
+\bb{Cloud Automation Intern at SPS Commerce}, Minneapolis, MN \side{05/2017 - 08/2018}
+\begin{itemize}[noitemsep]
+\item Wrote system to run generic tasks on a shared AWS ECS Cluster
+\item Later refactored the generic-cluster code and updated the API (backwards compatibly)
+\item Set up containerized deployment model for Ansible run on Jenkins 
+\item Built, tested, and deployed the database and server for SonarQube
+\item Helped give a talk on why to use SonarQube with a demo on how to use it
+\item Took over other small tickets for the cloud automation/security \& compliance teams
+\end{itemize}
+\bb{Teaching Assistant for Csci 2021: Machine Architecture at UMN}, Minneapolis, MN \side{01/2018 - 05/2018}\\
 \bb{Summer IT Assistant at Yankton School District}, Yankton, SD \side{Summers 05/2014 - 08/2016}
 
 
-\header{Technical Experiences}
-\bb{President and Founder of the Cloud Computing Student Group} \side{11/2017 - 12/2019}\\
-\tab I want to teach others the power of the cloud. \url{https://www.umncloud.com}
-\\
-\bb{Hackathon} \side{10/2018, 01/2020}\\
-\tab \href{https://devpost.com/software/surround-7fyc9t}{Surround} App at HackHarvard 2018. \href{https://devpost.com/software/socialize}{Social Capital} App at Minnehack 2020. 
-\\
-\bb{Self-Selected Class Projects} \side{05/2018} \\
-\tab Sentiment Analysis for Intro AI, VM Handoff in OpenStack++ for Dispersed Computing\\ 
-\tab Chatbot for Senior Software Proj, Cross-Platform App Comparison for Mobile Computing
-\\
-\bb{Coding Club Guru Volunteer} \side {2015 - 2016}\\
-\tab I helped teach Scratch programming to elementary students. Ran after the instructor quit. 
 
-\header{Unique Experiences}
-\bb{President of Philosophy Club} \side{04/2018 - Present.}\\
-\tab We have a member (usually an officer) present on a topic, then have group discussion.
-\\
-\bb{President of Tau Beta Pi} \side{09/2019 - Present.}\\
-\tab An engineering honor society with a chapter on campus. I have been a member since 01/2018.
-\\
-\bb{Writer for The Wake Magazine} \side{09/2016 - 10/2018}\\
-\tab I frequently wrote opinion pieces in the realm of technology or global policy.
-\\
+
+
+
+
+
+\header{Extra Experiences}
+\begin{tabular}{ l l l }
+President of Philosophy Club & Lead presentations/discussions/outings& 04/2018 - 05/2020\\
+President of Tau Beta Pi & Managed local chapter/national connection& 09/2019 - 05/2020\\
+Hackathon: Minnehack & \url{https://devpost.com/software/socialize} & 2020\\
+Founder of the Cloud Computing Student Group & \url{https://www.umncloud.com} & 11/2017 - 12/2019 \\
+Class Project: VM Handoff for Dispersed Data & \url{https://www.overleaf.com/read/hsxvgrhdphpm
+} & 12/2018\\
+Class Project: Chatbot for Senior Software Proj & Created PoC chatbot for Sleep Number & 12/2018\\
+Write for The Wake Magazine & \url{https://issuu.com/search?q=cody\%20perakslis} & 09/2016 - 10/2018\\
+Class Project: Sentiment Analysis for Intro AI & \url{https://github.com/CalvinRoth/NLPSentiment} & 05/2018\\
+Hackathon: Hack Harvard & \url{https://devpost.com/software/surround-7fyc9t} & 2018\\
+Coding Club Guru Volunteer & Taught elementary students (ran when instructor quit) & 2015 - 2016\\
+Home Project: Personal Debian Server & Connected to home router for storage/ssh/website  & 2016 \\
+\end{tabular}
+
+
+\begin{multicols}{2}
+\header{Awards}
+\begin{itemize}[noitemsep]
+\item 2019 U-Spatial Mapping Grand Prize Winner
+\item 2019 American Public Media Horizon Fund
+\item 2019 CSE 50th Anniversary Student Speaker
+\item 2019 Target Security Scholarship Winner
+\item 2018 Minnedemo 30 Presenter
+\item 2018 Holme's Center Biz Pitch Finalist
+\item 2017 tBRS Innovation Award Winner
+\item 2016 - 2020 Dean's List Every Semester
+\item 2016 National Merit Scholarship
+\end{itemize}
+\end{multicols}
+
 \end{document}
 
